@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d0" for="edge" attr.name="weight" attr.type="double" />
+  <graph edgedefault="directed">
+    <node id="Incorrect turbine operation" />
+    <node id="Increased turbine loads/acceleration" />
+    <node id="Vessel or aircraft collision" />
+    <node id="Falling topside components" />
+    <node id="Turbine parked" />
+    <node id="Reduced power output" />
+    <node id="Drift off station" />
+    <node id="Compromised buoyancy/stability" />
+    <node id="Large hydrostatic offset (angle of list/loll or draft change)" />
+    <node id="Excess dynamics" />
+    <node id="Capsize" />
+    <node id="Sink" />
+    <node id="Mooring-mooring clashing" />
+    <node id="Mooring-cable clashing" />
+    <node id="Anchor-cable clashing" />
+    <node id="Change in mooring profile" />
+    <node id="Excess mooring loads" />
+    <node id="Mooring line nonfunctional" />
+    <node id="Shared line nonfunctional" />
+    <node id="Excess anchor load" />
+    <node id="Anchor dragging" />
+    <node id="Change in cable profile" />
+    <node id="Excessive load/strain/bending on cable" />
+    <node id="Array cable: Loss of connectivity" />
+    <node id="Substation/grid interruption" />
+    <node id="Reduced AEP" />
+    <edge source="Incorrect turbine operation" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Falling topside components">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Turbine parked">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Reduced power output">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Drift off station">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Large hydrostatic offset (angle of list/loll or draft change)">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Excess dynamics">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Capsize">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Substation/grid interruption">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Turbine parked" target="Increased turbine loads/acceleration">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Turbine parked" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Turbine parked" target="Excess dynamics">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Turbine parked" target="Reduced AEP">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Reduced power output" target="Reduced AEP">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Vessel or aircraft collision">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Compromised buoyancy/stability">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Mooring-mooring clashing">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Drift off station" target="Mooring-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Excess mooring loads">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Compromised buoyancy/stability" target="Large hydrostatic offset (angle of list/loll or draft change)">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Compromised buoyancy/stability" target="Excess dynamics">
+      <data key="d0">0.8</data>
+    </edge>
+    <edge source="Compromised buoyancy/stability" target="Capsize">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Compromised buoyancy/stability">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Capsize">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess dynamics" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess dynamics" target="Capsize">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess dynamics" target="Excess mooring loads">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess dynamics" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="Sink">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="Mooring-mooring clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Capsize" target="Mooring-cable clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Capsize" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="Excess mooring loads">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sink" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sink" target="Mooring-cable clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Sink" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sink" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="Excess mooring loads">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="Change in cable profile">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="Excessive load/strain/bending on cable">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="Array cable: Loss of connectivity">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in mooring profile" target="Mooring-mooring clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in mooring profile" target="Mooring-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in mooring profile" target="Excess mooring loads">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess mooring loads" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess mooring loads" target="Mooring line nonfunctional">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Drift off station">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Compromised buoyancy/stability">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Excess dynamics">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Drift off station">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Excess dynamics">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Mooring-mooring clashing">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Change in mooring profile">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Excess mooring loads">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Excess anchor load" target="Anchor dragging">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Anchor dragging" target="Anchor-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Anchor dragging" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anchor dragging" target="Mooring line nonfunctional">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in cable profile" target="Mooring-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in cable profile" target="Anchor-cable clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Change in cable profile" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="Drift off station">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="Array cable: Loss of connectivity">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Array cable: Loss of connectivity" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Array cable: Loss of connectivity" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Turbine parked">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Reduced AEP">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

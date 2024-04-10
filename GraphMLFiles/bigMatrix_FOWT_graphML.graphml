@@ -1,0 +1,1041 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d0" for="edge" attr.name="weight" attr.type="double" />
+  <graph edgedefault="directed">
+    <node id="Incorrect turbine operation" />
+    <node id="Increased turbine loads/acceleration" />
+    <node id="Vessel or aircraft collision" />
+    <node id="Falling topside components" />
+    <node id="Turbine parked" />
+    <node id="Reduced power output" />
+    <node id="Drift off station" />
+    <node id="Compromised buoyancy/stability" />
+    <node id="Large hydrostatic offset (angle of list/loll or draft change)" />
+    <node id="Excess dynamics" />
+    <node id="Capsize" />
+    <node id="Sink" />
+    <node id="Mooring-mooring clashing" />
+    <node id="Mooring-cable clashing" />
+    <node id="Anchor-cable clashing" />
+    <node id="Change in mooring profile" />
+    <node id="Excess mooring loads" />
+    <node id="Mooring line nonfunctional" />
+    <node id="Shared line nonfunctional" />
+    <node id="Excess anchor load" />
+    <node id="Anchor dragging" />
+    <node id="Change in cable profile" />
+    <node id="Excessive load/strain/bending on cable" />
+    <node id="Array cable: Loss of connectivity" />
+    <node id="Substation/grid interruption" />
+    <node id="Reduced AEP" />
+    <node id="RNA structural" />
+    <node id="generator &amp; gearbox" />
+    <node id="turbine controls" />
+    <node id="tower structural" />
+    <node id="platform (structural integrity)" />
+    <node id="platform (watertightness)" />
+    <node id="ballast system failure" />
+    <node id="chain" />
+    <node id="synthetic rope" />
+    <node id="wire rope" />
+    <node id="connectors" />
+    <node id="clump weights or floats" />
+    <node id="single anchor" />
+    <node id="shared anchor" />
+    <node id="buoyancy modules" />
+    <node id="tether and anchor systems" />
+    <node id="cable protection system" />
+    <node id="dynamic cable" />
+    <node id="static cable" />
+    <node id="terminations" />
+    <node id="offshore joints" />
+    <edge source="Incorrect turbine operation" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="RNA structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="generator &amp; gearbox">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="turbine controls">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Incorrect turbine operation" target="tower structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="RNA structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="generator &amp; gearbox">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="turbine controls">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="tower structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Increased turbine loads/acceleration" target="platform (structural integrity)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Falling topside components">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Turbine parked">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Reduced power output">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Drift off station">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Large hydrostatic offset (angle of list/loll or draft change)">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Excess dynamics">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Capsize">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="Substation/grid interruption">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="RNA structural">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="generator &amp; gearbox">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="turbine controls">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="tower structural">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="platform (structural integrity)">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="platform (watertightness)">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="ballast system failure">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="chain">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="synthetic rope">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="wire rope">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="connectors">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="clump weights or floats">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="buoyancy modules">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="cable protection system">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="dynamic cable">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Vessel or aircraft collision" target="terminations">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Falling topside components" target="RNA structural">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Falling topside components" target="generator &amp; gearbox">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Falling topside components" target="turbine controls">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Falling topside components" target="tower structural">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Falling topside components" target="platform (structural integrity)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="platform (watertightness)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="ballast system failure">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Falling topside components" target="chain">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="synthetic rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="wire rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="connectors">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="clump weights or floats">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="buoyancy modules">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Falling topside components" target="cable protection system">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Falling topside components" target="dynamic cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Turbine parked" target="Increased turbine loads/acceleration">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Turbine parked" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Turbine parked" target="Excess dynamics">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Turbine parked" target="Reduced AEP">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Reduced power output" target="Reduced AEP">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Vessel or aircraft collision">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Compromised buoyancy/stability">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="Mooring-mooring clashing">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Drift off station" target="Mooring-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Drift off station" target="Excess mooring loads">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Drift off station" target="chain">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Drift off station" target="synthetic rope">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Drift off station" target="wire rope">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Drift off station" target="connectors">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Drift off station" target="cable protection system">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Drift off station" target="dynamic cable">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Drift off station" target="terminations">
+      <data key="d0">0.2</data>
+    </edge>
+    <edge source="Compromised buoyancy/stability" target="Large hydrostatic offset (angle of list/loll or draft change)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Compromised buoyancy/stability" target="Excess dynamics">
+      <data key="d0">0.8</data>
+    </edge>
+    <edge source="Compromised buoyancy/stability" target="Capsize">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Compromised buoyancy/stability" target="platform (structural integrity)">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Compromised buoyancy/stability">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="Capsize">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="platform (structural integrity)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="platform (watertightness)">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="chain">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="synthetic rope">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="wire rope">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="connectors">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="cable protection system">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="dynamic cable">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="static cable">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Large hydrostatic offset (angle of list/loll or draft change)" target="terminations">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess dynamics" target="Capsize">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess dynamics" target="Excess mooring loads">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess dynamics" target="RNA structural">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="generator &amp; gearbox">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="turbine controls">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="tower structural">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="platform (structural integrity)">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Excess dynamics" target="platform (watertightness)">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Excess dynamics" target="chain">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="synthetic rope">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="wire rope">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="connectors">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="cable protection system">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="dynamic cable">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="static cable">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess dynamics" target="terminations">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Capsize" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="Sink">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="Mooring-mooring clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Capsize" target="Mooring-cable clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Capsize" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="Excess mooring loads">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="RNA structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="generator &amp; gearbox">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="turbine controls">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="tower structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="platform (structural integrity)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="platform (watertightness)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="ballast system failure">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="chain">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="synthetic rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="wire rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="connectors">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="clump weights or floats">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="buoyancy modules">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Capsize" target="tether and anchor systems">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Capsize" target="cable protection system">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="dynamic cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="static cable">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Capsize" target="terminations">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Capsize" target="offshore joints">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Sink" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sink" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="Mooring-cable clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Sink" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sink" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="RNA structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="generator &amp; gearbox">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="turbine controls">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="tower structural">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="platform (structural integrity)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="platform (watertightness)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="ballast system failure">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sink" target="chain">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="synthetic rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="wire rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="connectors">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="clump weights or floats">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="buoyancy modules">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sink" target="tether and anchor systems">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Sink" target="cable protection system">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="dynamic cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="static cable">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Sink" target="terminations">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Sink" target="offshore joints">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="Excess mooring loads">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="chain">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="synthetic rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="wire rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="connectors">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-mooring clashing" target="clump weights or floats">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="chain">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="synthetic rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="wire rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="connectors">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="clump weights or floats">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="buoyancy modules">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="tether and anchor systems">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="cable protection system">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="dynamic cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="static cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="terminations">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Mooring-cable clashing" target="offshore joints">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="Change in cable profile">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="Excessive load/strain/bending on cable">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="Array cable: Loss of connectivity">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="tether and anchor systems">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="cable protection system">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="dynamic cable">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="static cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Anchor-cable clashing" target="offshore joints">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in mooring profile" target="Mooring-mooring clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in mooring profile" target="Mooring-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in mooring profile" target="Excess mooring loads">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in mooring profile" target="chain">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in mooring profile" target="synthetic rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in mooring profile" target="wire rope">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in mooring profile" target="connectors">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in mooring profile" target="clump weights or floats">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess mooring loads" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excess mooring loads" target="Mooring line nonfunctional">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess mooring loads" target="platform (structural integrity)">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Excess mooring loads" target="platform (watertightness)">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Excess mooring loads" target="chain">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess mooring loads" target="synthetic rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess mooring loads" target="wire rope">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess mooring loads" target="connectors">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess mooring loads" target="clump weights or floats">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess mooring loads" target="single anchor">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excess mooring loads" target="shared anchor">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Drift off station">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Compromised buoyancy/stability">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Excess dynamics">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Mooring line nonfunctional" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Drift off station">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Excess dynamics">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Mooring-mooring clashing">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Change in mooring profile">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="Excess mooring loads">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="synthetic rope">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="wire rope">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="connectors">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Shared line nonfunctional" target="shared anchor">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excess anchor load" target="Anchor dragging">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Anchor dragging" target="Anchor-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Anchor dragging" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anchor dragging" target="Mooring line nonfunctional">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Anchor dragging" target="single anchor">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Anchor dragging" target="shared anchor">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in cable profile" target="Mooring-cable clashing">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in cable profile" target="Anchor-cable clashing">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="Change in cable profile" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in cable profile" target="buoyancy modules">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Change in cable profile" target="tether and anchor systems">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in cable profile" target="cable protection system">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in cable profile" target="dynamic cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Change in cable profile" target="static cable">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in cable profile" target="terminations">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Change in cable profile" target="offshore joints">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="Drift off station">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="Array cable: Loss of connectivity">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="buoyancy modules">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="tether and anchor systems">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="cable protection system">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="dynamic cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="static cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="terminations">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Excessive load/strain/bending on cable" target="offshore joints">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Array cable: Loss of connectivity" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Array cable: Loss of connectivity" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Substation/grid interruption" target="Reduced AEP">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="RNA structural" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="RNA structural" target="Falling topside components">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="RNA structural" target="Turbine parked">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="RNA structural" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="generator &amp; gearbox" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="generator &amp; gearbox" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="turbine controls" target="Incorrect turbine operation">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="turbine controls" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="turbine controls" target="Turbine parked">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="turbine controls" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="tower structural" target="Increased turbine loads/acceleration">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="tower structural" target="Falling topside components">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="tower structural" target="Turbine parked">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="platform (structural integrity)" target="Falling topside components">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="platform (structural integrity)" target="Compromised buoyancy/stability">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="platform (structural integrity)" target="Large hydrostatic offset (angle of list/loll or draft change)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="platform (structural integrity)" target="Sink">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="platform (watertightness)" target="Compromised buoyancy/stability">
+      <data key="d0">0.7</data>
+    </edge>
+    <edge source="platform (watertightness)" target="Large hydrostatic offset (angle of list/loll or draft change)">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="platform (watertightness)" target="Capsize">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="platform (watertightness)" target="Sink">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="ballast system failure" target="Compromised buoyancy/stability">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="ballast system failure" target="Large hydrostatic offset (angle of list/loll or draft change)">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="chain" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="chain" target="Mooring line nonfunctional">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="chain" target="Shared line nonfunctional">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="synthetic rope" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="synthetic rope" target="Mooring line nonfunctional">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="synthetic rope" target="Shared line nonfunctional">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="wire rope" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="wire rope" target="Mooring line nonfunctional">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="wire rope" target="Shared line nonfunctional">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="connectors" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="connectors" target="Mooring line nonfunctional">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="connectors" target="Shared line nonfunctional">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="clump weights or floats" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="clump weights or floats" target="Excess mooring loads">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="single anchor" target="Anchor-cable clashing">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="single anchor" target="Change in mooring profile">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="single anchor" target="Mooring line nonfunctional">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="single anchor" target="Shared line nonfunctional">
+      <data key="d0">0.9</data>
+    </edge>
+    <edge source="single anchor" target="Anchor dragging">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="shared anchor" target="Anchor-cable clashing">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="shared anchor" target="Change in mooring profile">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="shared anchor" target="Excess mooring loads">
+      <data key="d0">0.1</data>
+    </edge>
+    <edge source="shared anchor" target="Mooring line nonfunctional">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="shared anchor" target="Shared line nonfunctional">
+      <data key="d0">2.0</data>
+    </edge>
+    <edge source="shared anchor" target="Anchor dragging">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="buoyancy modules" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="buoyancy modules" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="tether and anchor systems" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="tether and anchor systems" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="cable protection system" target="Change in cable profile">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="cable protection system" target="Excessive load/strain/bending on cable">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="dynamic cable" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="dynamic cable" target="Change in cable profile">
+      <data key="d0">0.5</data>
+    </edge>
+    <edge source="dynamic cable" target="Array cable: Loss of connectivity">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="static cable" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="static cable" target="Change in cable profile">
+      <data key="d0">0.5</data>
+    </edge>
+    <edge source="static cable" target="Array cable: Loss of connectivity">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="terminations" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="terminations" target="Change in cable profile">
+      <data key="d0">0.5</data>
+    </edge>
+    <edge source="terminations" target="Array cable: Loss of connectivity">
+      <data key="d0">1.0</data>
+    </edge>
+    <edge source="offshore joints" target="Reduced power output">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="offshore joints" target="Change in cable profile">
+      <data key="d0">0.5</data>
+    </edge>
+    <edge source="offshore joints" target="Array cable: Loss of connectivity">
+      <data key="d0">1.0</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,4 +1,4 @@
-[# Floating Offshore Wind Turbine Failure Analysis
+# Floating Offshore Wind Turbine Failure Analysis
 
 ## Project Description
 

@@ -47,7 +47,11 @@ from twoTurbineCaseStudy import *
 10) probability_over_time: input failure rate, time --> output probability of a failure at time t
 
 11) bayesian_inference: input adjacency matrix, node names, indicator nodes, evidence nodes, hypothesis nodes, probabilties, hypothesis
-boolean, printing boolean, multiple turbine boolean --> outputs inference probabilities
+boolean, printing boolean, multiple turbine boolean, parent or child indicator, twoTurbine boolean --> outputs inference probabilities
+
+12) backward_bayesian_inference: input adjacency matrix, list of node names, array of nodes to start with, array of evidence nodes, 
+ array of hypothesis nodes, probabilties, boolean for indexing into the right values of the array, boolean for multiple turbines,
+ parent or child indicator, boolean for twoTurbine method --> output two arrays of inference probabilities (one normalized and one not)
  
 ------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -520,8 +524,8 @@ def probability_over_time(lamda, t):
  ----------------------------------------------
  This method inputs adjacency matrix, list of node names, array of nodes to start with for generating the graph of the Bayesian network, array of 
  evidence nodes, array of hypothesis nodes, probabilties, boolean for finding hte probability of failure of the hypothesis, boolean for printing 
- information about the calculations, and boolean for multiple turbines. We calculate Bayesian inference given the evidence and hypothesis variables.
- This method outputs an array of inference probabilities.'''
+ information about the calculations, boolean for multiple turbines, parent or child calculation (string), and boolean for using the twoTurbine case
+ study method. We calculate Bayesian inference given the evidence and hypothesis variables. This method outputs an array of inference probabilities.'''
     
 def bayesian_inference(arr, nodeNames, indicator, num_evidence, num_hypothesis, probabilities, tf = True, printing = False, multi= False, poc="parent", twoTurbine = False):
     # print("E", num_evidence)
@@ -642,8 +646,9 @@ def bayesian_inference(arr, nodeNames, indicator, num_evidence, num_hypothesis, 
 ''' backward_bayesian_inference Documentation
  ----------------------------------------------
  This method inputs adjacency matrix, list of node names, array of nodes to start with for generating the graph of the Bayesian network, array of 
- evidence nodes, array of hypothesis nodes, probabilties, boolean for indexing into the right values of the array, and boolean for multiple turbines. 
- We calculate Bayesian inference given the evidence and hypothesis variables. This method outputs an array of inference probabilities (normalized and not).'''
+ evidence nodes, array of hypothesis nodes, probabilties, boolean for indexing into the right values of the array, boolean for multiple turbines, parent or child
+ calculation type (string), and boolean for using twoTurbine case study method. We calculate Bayesian inference given the evidence and hypothesis variables. 
+ This method outputs an array of inference probabilities (normalized and not).'''
     
 def backward_bayesian_inference(adjacency_matrix, nodeNames, indicator, evidence, hypothesis, probabilities, start_bool = True, multi = False, poc="parent", twoTurbine = False):
     # Calculate Bayesian inference for hypothesis = True and hypothesis = False

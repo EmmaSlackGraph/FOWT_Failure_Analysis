@@ -32,6 +32,8 @@ import matplotlib.pyplot as plt
  for showing names --> outputs tuples of max out degree, max in degree, and max overall degree with the nodes that
  have these max degrees
 
+10) getProbabilities: inputs fileName, sheetName, boolean of nodeLabels --> output probabilities and name array
+
 
 ------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------
@@ -413,3 +415,22 @@ def max_degrees(arr, nodeNames, threshold = 0, name = False):
     # three tuples about maximum out degree, in degree, and overall degree. Rather than listing the
     # names of the nodes, their corresponding numbers are listed.
     return  (max_out, max(out_degrees)), (max_in, max(in_degrees)), (max_deg, max(degrees))
+
+
+
+''' getProbabilities Documentation
+ -------------------------------
+ This method inputs an Excel file and reads the probabilities from the file. We return an array of these
+ probabilities and an array of the node names (indexed the same as the probability array).'''
+
+def getProbabilities(fileName, sheetName = None):
+    df = pd.read_excel(fileName, sheet_name=sheetName)
+
+    # Convert the data frame to a numpy array
+    arr = df.to_numpy()
+
+    # Create an array of the names of the nodes for the graph.
+    nodeNames = arr[:, 0].flatten()
+    
+    # return the adjacency matrix without labels and an array of the names of the nodes
+    return arr[:, 1], nodeNames

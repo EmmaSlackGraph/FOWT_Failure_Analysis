@@ -157,7 +157,8 @@ def breadth_first_parent(arr, nodeNames, source):
     else: effects.append(nodeNames[source - 1])
 
     # Binarize the adjacency matrix
-    adj = make_binary(arr).astype(int)
+    arr2 = arr.copy()
+    adj = make_binary(arr2).astype(int)
 
     # Create an array of booleans such that the ith entry indicates if the node has already been visited. Nodes
     # that have been visited are set to TRUE.
@@ -274,22 +275,21 @@ def draw_bfs_multipartite(arr, nodeNames, start, type = "child", multi_turbine =
  This method returns this tree, the tree's adjacency matrix, a dictionary of nodes, arrays for effects and modes, and array
  of nodes (in the order they are added).'''
 
-def breadth_first_multi(arr, nodeNames, sources, type):
+def breadth_first_multi(arr, nodeNames, sources, type_poc):
     # Function that determines how value of the layer changes, depending on the type of calculation
-    def layer_fcn(layer, type):
-        if type == "child":
+    def layer_fcn(layer, type_poc):
+        if type_poc == "child":
             return layer + 1
-        elif type == "parent":
+        elif type_poc == "parent":
             return layer - 1
-    
     # Determining if the current generation is after the former node's generation, depending on the type of calculation
-    def same_layer(layer1, layer2, type):
-        if type == "child":
+    def same_layer(layer1, layer2, type_poc):
+        if type_poc == "child":
             if layer1 > layer2:
                 return True
             else:
                 return False
-        elif type == "parent":
+        elif type_poc == "parent":
             if layer1 < layer2:
                 return True
             else:
@@ -309,33 +309,33 @@ def breadth_first_multi(arr, nodeNames, sources, type):
     gens = {}
 
     # Initialize value for the first layer created
-    if type == "child":
+    if type_poc == "child":
         layer_val = 0
     else:
         layer_val = 100
 
     # Add the source node to the graph
-    for source in sources:
-        G.add_node(nodeNames[source - 1]) 
+    for start in sources:
+        G.add_node(nodeNames[start - 1]) 
 
         # Determine if the source node is an effect or a mode, and add it to the correct array
-        '''if source < 27: effects.append(nodeNames[source - 1])
-        else: modes.append(nodeNames[source - 1])'''
+        if start < 27: effects.append(nodeNames[start - 1])
+        else: modes.append(nodeNames[start - 1])
 
-        if source < 49: modes.append(nodeNames[source - 1])
-        else: effects.append(nodeNames[source - 1])
+        '''if start < 49: modes.append(nodeNames[start - 1])
+        else: effects.append(nodeNames[start - 1])'''
 
         # Visit the source node
-        nodeList[source-1] = True
-        names_of_nodes.append(nodeNames[source - 1])
+        nodeList[start-1] = True
+        names_of_nodes.append(nodeNames[start - 1])
 
         # Add the source node to the queue. We use a queue to iterate through the nodes. This allows us to search through
         # the graph generation by generation rather than following one specific path at a time.
-        queue.append([source, 0])
+        queue.append([start, 0])
 
         # Initialize a dictionary that will tell us what generation each node is in. Label the generation of the source node
         # as zero.
-        gens.update({nodeNames[source-1]: {"layer": layer_val}})
+        gens.update({nodeNames[start-1]: {"layer": layer_val}})
         # print("non", names_of_nodes)
     
     # Continue while there are still nodes in the queue (reference algorithms for a breadth first search for more info)
@@ -343,7 +343,7 @@ def breadth_first_multi(arr, nodeNames, sources, type):
         # Set the node we are looking at equal to the node next in line in the queue
         current = queue[0]
 
-        if type == "child":
+        if type_poc == "child":
         # Determine the children of the current node. 
             children_bool = adj[current[0]-1] @ nodes # vector of zeros and child names (numerical names)
             children = children_bool[np.nonzero(children_bool)] #list of just the child names (numerical names)
@@ -357,7 +357,7 @@ def breadth_first_multi(arr, nodeNames, sources, type):
             # in the same generation, continue with the following:
             # print("child", child)
 
-            if nodeList[child - 1] == False or same_layer(gens[nodeNames[child - 1]]['layer'], current[1], type):
+            if nodeList[child - 1] == False or same_layer(gens[nodeNames[child - 1]]['layer'], current[1], type_poc):
 
                 # Add the child to the graph, and to the array of node names
                 G.add_node(nodeNames[child-1])
@@ -373,14 +373,14 @@ def breadth_first_multi(arr, nodeNames, sources, type):
                 else: effects.append(nodeNames[child - 1])
 
                 # Add an edge between the current node and child in the tree we are building
-                if type == "child":
+                if type_poc == "child":
                     G.add_edge(nodeNames[current[0]-1], nodeNames[child-1])
                 else:
                     G.add_edge(nodeNames[child-1], nodeNames[current[0]-1])
 
-                queue.append([child, layer_fcn(current[1], type)]) # Append the child to the queue
+                queue.append([child, layer_fcn(current[1], type_poc)]) # Append the child to the queue
                 nodeList[child - 1] = True # Change the status of the child to say we have visited it
-                gens.update({nodeNames[child-1]: {"layer": layer_fcn(current[1], type)}}) # Add child to dictionary of nodes
+                gens.update({nodeNames[child-1]: {"layer": layer_fcn(current[1], type_poc)}}) # Add child to dictionary of nodes
 
         # Remove the current node from the queue
         queue = queue[1:]

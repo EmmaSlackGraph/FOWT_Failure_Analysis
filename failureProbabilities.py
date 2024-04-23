@@ -16,10 +16,11 @@ from pgmpy.factors.discrete import TabularCPD
 from graphBuilder import *
 from spectralAnalysis import *
 from searchMethods import *
+from twoTurbineCaseStudy import *
 
 ''' failureProbability -------------------------------------------------------------------------------------------------------------
 
-            ****************************** Last Updated: 10 April 2024 ******************************
+            ****************************** Last Updated: 23 April 2024 ******************************
 
  Methods:
  1) transition_natrix: inputs adjacency matrix, probabilities --> output conditional probabilities, scaled probabilities
@@ -390,17 +391,24 @@ def mult_cond_prob(parents, current, probabilities, midpoint = True):
     parents_sub.append((current - 1))
     parents_sub = np.array(parents_sub)
     parent_probs = probabilities[parents_sub]
+    # print(probabilities)
 
     # Initialize denomenator
     denomenator = 1
 
     # Calculate the single conditional probability for pairs of events until there are no events left
     while len(parent_probs) > 1:
-        val = single_conditional_prob(parent_probs[0][0], parent_probs[1][0], midpoint) * parent_probs[0][0]
+        lb = parent_probs[0][0] * parent_probs[1][0] # Lower bound for conditional probability
+        ub = min(parent_probs[0][0], parent_probs[1][0]) # Upper bound for conditional probability
+        if midpoint: 
+            val = (lb + ub) / 2 # Find midpoint between the lower and upper bounds
+        else: 
+            rand_val = np.random.rand()
+            val = rand_val * (ub - lb) + lb
         parent_probs = np.vstack(([val], parent_probs[2:]))
         if len(parent_probs) == 2:
             denomenator = parent_probs[0][0]
-
+    # print(parent_probs[0][0], denomenator, parent_probs[0][0]/denomenator)
     return parent_probs[0][0]/denomenator # Return the conditional probability
 
 
@@ -433,13 +441,14 @@ def bayesian_table(adj, current, midpoint, nodeNames, pvs = False, prob_vals=Non
 
     for iteration in range(2 ** len(parents)): # For each combination of parents having either failed or not
         if pvs: # Determine the probabilities being used
-            probabilities = prob_vals
+            probabilities = prob_vals.copy()
         else:
             probabilities = np.array([0.0195, 0.0195, 0.013625, 0.0055, 0.0175, 0.2075, 0.001, 0.001, 0.001, 0.093185, 0.001, 0.001,
                                     0.027310938, 0.033968125, 0.033968125, 0.01375, 0.01375, 0.01375, 0.01375, 0.01375, 0.01375,
                                     0.0205, 0.0205, 0.02, 0.01, 0.01, 0.233, 0.288, 0.543374, 0.1285, 0.01, 0.01, 0.01, 0.015, 0.0155,
                                     0.015, 0.0155, 0.015, 0.0155, 0.015, 0.33, 0.025, 0.025, 0.025, 0.025, 0.025, 0.105]) #0.01375, 
         probabilities = np.reshape(probabilities, (len(probabilities), 1))
+        # print(probabilities)
 
         true_false_array = [] # Iniitalize to record which parents have failed
 
@@ -448,12 +457,14 @@ def bayesian_table(adj, current, midpoint, nodeNames, pvs = False, prob_vals=Non
             true_false_array.append((int(iteration / (2 ** p)) % 2)) # Append whether or not the parent node has failed
             prob_table[iteration][p] = int(iteration / (2 ** p)) % 2 # Append whether or not the parent node has failed
 
-            if mult_turbine and nodeNames[int(current - 1)][:3] != nodeNames[int(parents[p] - 1)][:3]: #and p > 0) and parents[p] <= parents[p-1]:
-                probabilities[int(parents[p]-1)] *= 0.7 # If there is more than one turbine, then decrease the probability of failure by 30%
-
+            # if mult_turbine and nodeNames[int(current - 1)][:3] != nodeNames[int(parents[p] - 1)][:3]: #and p > 0) and parents[p] <= parents[p-1]:
+                # probabilities[int(parents[p]-1)] *= 0.7 # If there is more than one turbine, then decrease the probability of failure by 30%
         prob = mult_cond_prob(parents, current, probabilities, midpoint) # Calculate the conditional probability of the node given if the parents have failed or not
+        # print(true_false_array, prob)
+        # print(probabilities)
         prob_table[iteration][-2] = prob # Add calculated probability to the array
         prob_table[iteration][-1] = 1 - prob # Add the probability of the node not failing to the array
+    #print(prob_table)
     return parents, prob_table # Return a list of the parents and the probability distribution array
 
 
@@ -465,11 +476,17 @@ def bayesian_table(adj, current, midpoint, nodeNames, pvs = False, prob_vals=Non
  boolean for midpoint calculation, and number of iterations. We calculate the probability distribution for each node in the graph and format it
  into a table. This method writes the probability distribution tables to an Excel file (nothing returned).'''
     
-def write_bayesian_probabilities(adjacency_matrix, nodeNames, probabilities, mult_turbine, midpoint=True, num_iterations=1):
-    with pd.ExcelWriter("bayesianProbabilities.xlsx") as writer: # Write to file
+def write_bayesian_probabilities(adjacency_matrix, nodeNames, probabilities, mult_turbine, midpoint=True, num_iterations=1, twoTurbines = False, name=""):
+    ps = probabilities.copy()
+    with pd.ExcelWriter("bayesianProbabilities"+name+".xlsx") as writer: # Write to file
         for current in range(1, adjacency_matrix.shape[0]+1): # Repeat for each node in the graph
-
-            parents, our_table = bayesian_table(adjacency_matrix, current, midpoint, nodeNames, True, probabilities, mult_turbine) # Probability distrubution table
+            if any(probabilities != ps):
+                print("Unequal probabilities", current-1)
+                break
+            adjacency_matrix2 = adjacency_matrix.copy()
+            parents, our_table = bayesian_table(adjacency_matrix2, current, midpoint, nodeNames, True, probabilities, mult_turbine) # Probability distrubution table
+            if twoTurbines:
+                parents, our_table = twoTurbine_bayesian_table(adjacency_matrix, adjacency_matrix, current, nodeNames, nodeNames) # Probability distrubution table
             parents = [int(parent) for parent in parents] # Format parent list
 
             # Find average probability distribution table for the number of iterations
@@ -506,88 +523,118 @@ def probability_over_time(lamda, t):
  information about the calculations, and boolean for multiple turbines. We calculate Bayesian inference given the evidence and hypothesis variables.
  This method outputs an array of inference probabilities.'''
     
-def bayesian_inference(arr, nodeNames, indicator, evidence, hypothesis, probabilities, tf = True, printing = False, multi= False):
-    K, a, g, e, m, non = breadth_first_multi(arr, nodeNames, indicator, "parent") # Generate tree for Bayesian network
+def bayesian_inference(arr, nodeNames, indicator, num_evidence, num_hypothesis, probabilities, tf = True, printing = False, multi= False, poc="parent", twoTurbine = False):
+    # print("E", num_evidence)
+    # print("H", num_hypothesis)
+    a = arr.copy()
+    non = nodeNames
+    prblts = probabilities
+    evidence = num_evidence
+    hypothesis = num_hypothesis
+    if not multi:
+        K, a, g, e, m, non = breadth_first_multi(a, nodeNames, indicator, poc) # Generate tree for Bayesian network
+        # draw_bfs_multipartite(arr, nodeNames, indicator, type = "multi-"+poc, multi_turbine = False)
+        prblts = [] # Initialize array of node probabilities (in order of appearance in graph)
+        for node in non:
+            node_index = np.where(nodeNames == node)[0][0]
+            prblts.append(probabilities[node_index]) # Add nodes to array of node probabilities
+        prblts = np.array(prblts)
 
-    # --- Lines for debugging ----
-    # draw_bfs_multipartite(arr, nodeNames, indicator, "multi-parent", False)
-    # our_parents, our_table = bayesian_table(a, current, True, pvs = False, prob_vals=None)
-    # print(non)
+        evidence = []
+        hypothesis = []
+        for hypothesis_node in num_hypothesis: # Adjust hypothesis node so that index in tree matches up with index in original adjacency matrix
+            if twoTurbine:
+                non = np.array(non)
+            if nodeNames[hypothesis_node - 1] not in non: # If node is not in tree, then there is a 0% probability of failure
+                print("Probability table of", nodeNames[hypothesis_node - 1], "...", np.reshape(np.array([0,1]), (1,2)))
+                return np.reshape(np.array([0,1]), (1,2)), np.reshape(np.array([0,1]), (1,2))
+            hypothesis.append(np.where(non == nodeNames[hypothesis_node - 1])[0][0])
 
-    prblts = [] # Initialize array of node probabilities (in order of appearance in graph)
-    for node in non:
-        node_index = np.where(nodeNames == node)[0][0]
-        prblts.append(probabilities[node_index]) # Add nodes to array of node probabilities
-    prblts = np.array(prblts)
+        for evidence_node in num_evidence: # Adjust evidence node so that index in tree matches up with index in original adjacency matrix
+            if twoTurbine:
+                non = np.array(non)
+            if nodeNames[evidence_node - 1] not in non: # If node is not in tree, then this is an error!
+                print("ERROR - evidence node, " + nodeNames[evidence_node - 1] + ", not in graph!")
+            if evidence_node in num_hypothesis:# If node is in hypothesis, then probability of failure is 100%
+                print("Probability table of", nodeNames[evidence_node - 1], "...", np.reshape(np.array([1,0]), (1,2)))
+                return np.reshape(np.array([1,0]), (1,2)), np.reshape(np.array([1,0]), (1,2))
+            evidence.append(np.where(non == nodeNames[evidence_node - 1])[0][0])
 
     probabilitiy_table = np.zeros((2, a.shape[0])) # Initialize table of inference probabilities
-
     nodes = diagonal_nodes(a) # Diagonal matrix of node names (numerical +1)
     a = make_binary(a, 0.5) # Binarize adjacency table
+    hypothesis_nodes_array = np.zeros((len(hypothesis), 2))
 
-    for node in reversed(range(a.shape[0])):
-        # if node == 0:
-            # continue
+    # Depending on tree (forward or backward propagation), either iterate through nodes forward or backwards
+    if poc == "parent":
+        this_range = reversed(range(a.shape[0]))
+    elif poc == "child":
+        this_range = range(a.shape[0])
+
+    for node in this_range:
         pts_bool = nodes @ a[:, node] # vector of zeros and child names (numerical names)
         pts = pts_bool[np.nonzero(pts_bool)] #list of just the child names (numerical names)
 
-        # If no parents, add probability of node failing to the probability table and continue
-        if len(pts) < 1:
+        if len(pts) < 1: # If no parents, the probability is the initial probability
             probabilitiy_table[0][node] = prblts[node]
             probabilitiy_table[1][node] = 1 - prblts[node]
             continue
 
         parents, our_table = bayesian_table(a, node+1, True, nodeNames, True, prblts) # Calculate the probability distribution table
-        mlt_table = np.ones((our_table.shape[0],2)) # Initialize table for multiplying across rows of probability distribution table
 
-        # --- Lines for debugging ----
-        # print(node, pts==parents)
-        # print("parents", parents)
-        # print(probabilitiy_table)
+        # If only using two turbines (specific to case study), calculate using twoTurbine method
+        if twoTurbine:
+            parents, our_table = twoTurbine_bayesian_table(a, arr, node + 1, nodeNames, non) # Calculate the probability distribution table
+        mlt_table = np.ones((our_table.shape[0],2)) # Initialize table for multiplying across rows of probability distribution table
         
         for i in range(our_table.shape[0]):
             for j in range(our_table.shape[1] - 2):
                 parent = int(parents[j])
 
-                 # Replace boolean in probability distribution table with probability of this event
+                # Replace boolean in probability distribution table with probability of this event
                 if our_table[i,j] == 0:
+                    # print(a.shape, probabilitiy_table.shape)
                     our_table[i,j] = probabilitiy_table[0][parent - 1]
 
                      # If the node is in the hypothesis or evidence array, do not include this 
                     if probabilitiy_table[0][parent - 1] == 0:
-                        print("indexing_error!!", parent)
-                    if (parent in hypothesis and tf) or (parent in evidence):
+                        # print("indexing_error!!", parent, node)
+                        # print(non[parent], non[node])
+                        break
+                    if (parent-1 in hypothesis and tf): # or (parent in evidence):
                         our_table[i,j] = 0
+                        # print("in hypto and tf or in evidence", parent)
                 else:
                     our_table[i,j] = probabilitiy_table[1][parent - 1]
 
                      # If the node is in the hypothesis or evidence array, do not include this 
-                    if (parent in hypothesis and not tf) or (parent in evidence):
+                    if (parent-1 in hypothesis and not tf) or (parent-1 in evidence):
                         our_table[i,j] = 0
+                        # print("in hypto and not tf or in evidence", parent)
 
                 mlt_table[i,0] *= our_table[i,j] # Multiply the probabilities across the probability distribution table
-
             mlt_table[i,1] = mlt_table[i,0] * our_table[i, -1] # Multiple by the probability of event not failing given combination of parent failure
             mlt_table[i,0] *= our_table[i, -2] # Multiple by the probability of event failing given combination of parent failure
 
         sm_table = np.sum(mlt_table, axis = 0) #/np.sum(mlt_table) # Sum the products of probabilities across the columns
+
+        if node in hypothesis:
+            print("Probability table of", non[node].replace("\n", " "), "...", sm_table)
+            hypothesis_nodes_array[np.where(np.array(hypothesis) == node)[0][0]][0] = sm_table[0]
+            hypothesis_nodes_array[np.where(np.array(hypothesis) == node)[0][0]][1] = sm_table[1]
+            if all(hypothesis_nodes_array != 0):
+                return probabilitiy_table, hypothesis_nodes_array
+
         probabilitiy_table[0][node] = sm_table[0] # Update the inference probability table with the probabilites just calculated
         probabilitiy_table[1][node] = sm_table[1]
-        
-        # print(sm_table, np.sum(sm_table))
-        #if node == 19:
-        #print(our_table)
-        #print(mlt_table)
 
-    # if printing: # Print the inference probability, along with the indicators, evidence, and hypothesis conditionals
-        # print("Indicator:", nodeNames[np.array(indicator)])
-        # print("Evidence:", nodeNames[np.array(evidence)])
-        # print("Hypothesis:", nodeNames[np.array(hypothesis)])
-        # print("Probability of Failure:", probabilitiy_table[:, 0][0]/np.sum(probabilitiy_table[:, 0]))
-        # print("Probability of No Failure:", probabilitiy_table[:, 0][1]/np.sum(probabilitiy_table[:, 0]))
-        # print(np.sum(probabilitiy_table, axis = 0))
-
-    return probabilitiy_table # Return array or inference probabilities
+    if printing: # Print the inference probability, along with the indicators, evidence, and hypothesis conditionals
+        print("Indicator:", nodeNames[np.array(indicator)])
+        print("Evidence:", nodeNames[np.array(evidence)])
+        print("Hypothesis:", nodeNames[np.array(hypothesis)])
+        print("Probability of Failure:", probabilitiy_table[:, 0][0], probabilitiy_table[:, 0][0]/np.sum(probabilitiy_table[:, 0]))
+        print("Probability of No Failure:", probabilitiy_table[:, 0][1], probabilitiy_table[:, 0][1]/np.sum(probabilitiy_table[:, 0]))
+    return probabilitiy_table, hypothesis_nodes_array # Return array or inference probabilities
 
 
 
@@ -598,36 +645,62 @@ def bayesian_inference(arr, nodeNames, indicator, evidence, hypothesis, probabil
  evidence nodes, array of hypothesis nodes, probabilties, boolean for indexing into the right values of the array, and boolean for multiple turbines. 
  We calculate Bayesian inference given the evidence and hypothesis variables. This method outputs an array of inference probabilities (normalized and not).'''
     
-def backward_bayesian_inference(adjacency_matrix, nodeNames, indicator, evidence, hypothesis, probabilities, start_bool = True, multi = False):
+def backward_bayesian_inference(adjacency_matrix, nodeNames, indicator, evidence, hypothesis, probabilities, start_bool = True, multi = False, poc="parent", twoTurbine = False):
     # Calculate Bayesian inference for hypothesis = True and hypothesis = False
     #print("--- First Run of Bayesian Inference ----------------")
-    pt1 = bayesian_inference(adjacency_matrix, nodeNames, indicator, evidence, hypothesis, probabilities, True, printing=True, multi = multi)
+    # print("Before bn", probabilities.shape)
+    printing = False
+    if len(evidence) > 0 and len(hypothesis)>0:
+        printing = False
+
+    pt1, hnd1 = bayesian_inference(adjacency_matrix, nodeNames, indicator, evidence, hypothesis, probabilities, True, printing=printing, multi = multi, poc=poc, twoTurbine=twoTurbine)
     #print()
     #print("--- Second Run of Bayesian Inference ---------------")
-    pt2 = bayesian_inference(adjacency_matrix, nodeNames, indicator, evidence, hypothesis, probabilities, False, printing=True, multi = multi)
-
+    if poc == "parent":
+        pt2, hnd2 = bayesian_inference(adjacency_matrix, nodeNames, indicator, evidence, hypothesis, probabilities, False, printing=printing, multi = multi, poc=poc, twoTurbine=twoTurbine)
+    # print("pt1", pt1[:, 0])
+    # print("pt2", pt2[:, 0])
     # Choose correct indexing value
     index = 1
     if start_bool:
         index = 0
 
+    if multi:
+        return [hnd1[0][0]/(hnd1[0][0]+hnd1[0][1]), hnd1[0][1]/(hnd1[0][0]+hnd1[0][1])], [0,0]
+
     # Depending on what our evidence and hypothesis nodes are, index into the correct values
-    if 0 in evidence:
+    if poc == "parent" and 0 in evidence:
         p_true = pt1[:, 0][index]
         p_false = pt2[:, 0][index]
-    elif 0 in hypothesis:
+
+    elif poc == "parent" and 0 in hypothesis:
         p_true = pt1[:, 0][0] + pt2[:, 0][0]
         p_false = pt1[:, 0][1] + pt2[:, 0][1]
+
+    elif poc == "child":
+        if hnd1.shape[0] == 1:
+            p_true = hnd1[0][0]
+            p_false = hnd1[0][1]
+
+        else: # If multiple nodes in hypothesis, multiply all possibilities together to get normailized value
+            print("Starting hypothesis for-loops...")
+            p_false = 0
+            for iteration in range(2 ** hnd1.shape[0]):
+                p_false_mult = 1
+                for node in range(hnd1.shape[0]):
+                    p_false_mult *= hnd1[node][int(iteration / (2 ** node)) % 2]
+                if iteration == 0:
+                    p_true = p_false_mult
+                else:
+                    p_false += p_false_mult
+                if (iteration) % 1000000000000 == 0:
+                    print("Percent done:", iteration/(2 ** hnd1.shape[0]) * 100)
+            print("Percent done:", 100)
     else:
         p_true = np.sum(pt1[:, 0])
         p_false = np.sum(pt2[:, 0])
 
     probability_distribution = [p_true/(p_true + p_false), p_false/(p_true + p_false)] # Normalize the probability distribution of the event happening
-
-    #print()
-    #print("--- Probability of", hypothesis, "given", evidence, "-------")
-    #print("Probability Distribution:", probability_distribution)
-    print("Evidnece", evidence, "Hypothesis", hypothesis)
 
     return probability_distribution, [p_true, p_false] # Return the normalized probability distribution and unnormalized distribution
 
@@ -656,7 +729,7 @@ monte_carlo_sim(num_iterations, plot, start, adjacency_matrix, nodeNames, rand_s
 
 
 '''# ----------- For running the code: feel free to uncomment -------------------
-adjacency_matrix, nodeNames = excel2Matrix("failureData.xlsx", "bigMatrix")
+adjacency_matrix, nodeNames = excel2Matrix("ExcelFiles/failureData.xlsx", "bigMatrix")
 probabilities = np.array([0.0195, 0.0195, 0.013625, 0.0055, 0.0175, 0.2075, 0.001, 0.001, 0.001, 0.093185, 0.001, 0.001,
                             0.027310938, 0.033968125, 0.033968125, 0.01375, 0.01375, 0.01375, 0.01375, 0.01375, 0.01375,
                             0.0205, 0.0205, 0.02, 0.01, 0.01, 0.233, 0.288, 0.543374, 0.1285, 0.01, 0.01, 0.01, 0.015, 0.0155,
@@ -666,5 +739,6 @@ targets = [44]
 starts = [16, 33, 35, 36]
 
 # C, D = bayesian_table(adjacency_matrix, 16, True, pvs = True, prob_vals=probabilities, mult_turbine = False)
-A, B = backward_bayesian_inference(adjacency_matrix, nodeNames, [0], [0], [16], probabilities, start_bool = True)
-print(B)'''
+# A, B = backward_bayesian_inference(adjacency_matrix, nodeNames, [0], [0], [44], probabilities, start_bool = True)
+# print(B)
+write_bayesian_probabilities(adjacency_matrix, nodeNames, probabilities, mult_turbine = True, midpoint = True, num_iterations=1)'''

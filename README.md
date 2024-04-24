@@ -86,6 +86,13 @@ There is no 'right' or 'wrong' way to use this code (necessarily). There are a l
   #### 19) spectralAnalysis.py
   This file finds clusters in the graph using spectral methods. In other words, this file uses the eigenvalues and eigenvectors of the graph Laplacian (a matrix which encodes information about the nodes' degrees and adjacency) to determine how to cluster the network.
 
+  #### 21) streamlining.py
+  This code plots nodes less than a certain (initial) probability with a paler color or not at all.
+
+  #### 22) twoTurbineCaseStudy.py
+  This file calculates the probability table (to then be used in a Bayesian Network) for the two-turbine case study in which probabilities are determined by the adjacency matrix (rather than a list of initial probabilities).
+  
+
 ## Credits
 Developed by Emma Slack and Matt Hall, with support from the National Renewable Energy Laboratory (NREL) and the Department of Energy's (DOE) Science Undergradute Laboratory Internships (SULI) program.
 

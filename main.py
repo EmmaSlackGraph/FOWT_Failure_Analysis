@@ -15,9 +15,16 @@ from physicsPositions import *
 from fiedlerVoronoi import *
 from plotClusters import *
 from clusterAnalysis import *
-from failureProbabilities import *
 from sympy import *
 import copy
+
+adjacency_matrix, nodeNames = excel2Matrix("failureData.xlsx", "bigMatrix")
+current = 2
+midpoint = True
+num_iterations = 1
+
+
+
 
 '''arr, nodeNames = excel2Matrix("failureData.xlsx", "modes2effects")
 names = []

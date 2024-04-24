@@ -58,23 +58,32 @@ There is no 'right' or 'wrong' way to use this code (necessarily). There are a l
   
   #### 10) graphml2nwx.py
    This file reads a `graphML` file (presumably from yEd) and constructs a corresponding graph in Networkx.
+
+  #### 11) holding_block.py
+  This file is a document with in-progress code.
+
+  #### 12) main.py
+  Use this file to run code in other files.
   
-  #### 11) otherLibrariesPlot.py
+  #### 13) otherLibrariesPlot.py
    This file uses several other Python libraries (including Dash Cytoscape, Python `-igraph`, and Easy Graph) to plot inputted graphs.
   
-  #### 12) physicsPositions.py
+  #### 14) physicsPositions.py
    The code in this file implements the Barycentric method and Fruchterman & Reingold methods. The Barycentric method is a plotting algorithm that attempts to place each 'free' node in the center of all other nodes in the graph. But, this means that the Barycentric method requires an initial set of 'fixed' nodes that give the free nodes a starting point. The Fruchterman & Reingold method is another plotting algorithm, but uses attractive and repulsive forces to place the nodes (akin to spring systems such that each edge is a spring and each node a steel ring).
   
-  #### 13) plotClusters.py
+  #### 15) plotClusters.py
   This file finds subgraphs of the inputted failure modes/effects graph. These subgraphs are either computed through clustering algorithms or built from finding paths throughout the graph. The plotClusters.py also has plotting methods to visualize the subgraphs and clusters.
+
+  #### 16) poster_calculation.py
+  Run this file to calculate all pairwise probabilities in an array and write to an Excel file.
   
-  #### 14) searchMethods.py
+  #### 17) searchMethods.py
    The code in this file uses an altered depth-first search to simulate a cascading failure. For a given failure, the method finds all the immediate consequences (aka the node's children), then all the secondary consequences (aka the node's grandchildren), and so on until there are no more nodes to visit. This produces a subgraph in which all edges are pointing in the same direction (the graph is multipartite).
   
-  #### 15) smallWorldAnalysis.py
+  #### 18) smallWorldAnalysis.py
    This code evaluates if the inputted graph is 'small-world.' Small world graphs are a unique type of network in which information/disease/failures travel quickly and reliably. By reliable travel, we mean that there are multiple routes to each node. So if one route is blocked, there is another way to reach the destination.
   
-  #### 16) spectralAnalysis.py
+  #### 19) spectralAnalysis.py
   This file finds clusters in the graph using spectral methods. In other words, this file uses the eigenvalues and eigenvectors of the graph Laplacian (a matrix which encodes information about the nodes' degrees and adjacency) to determine how to cluster the network.
 
 ## Credits

@@ -395,13 +395,13 @@ def mult_cond_prob(parents, current, probabilities, midpoint = True):
     parents_sub.append((current - 1))
     parents_sub = np.array(parents_sub)
     parent_probs = probabilities[parents_sub]
-    # print(probabilities)
-
     # Initialize denomenator
     denomenator = 1
 
     # Calculate the single conditional probability for pairs of events until there are no events left
     while len(parent_probs) > 1:
+        if (not isinstance(parent_probs[1][0], float)) and len(parent_probs[1][0]) > 1:
+            parent_probs[1][0] = parent_probs[1][0][1]
         lb = parent_probs[0][0] * parent_probs[1][0] # Lower bound for conditional probability
         ub = min(parent_probs[0][0], parent_probs[1][0]) # Upper bound for conditional probability
         if midpoint: 

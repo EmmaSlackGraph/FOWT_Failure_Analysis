@@ -119,7 +119,14 @@ def turbine_array_child(arr, nodeNames, start_arr, num_turbines, turbine_info, s
                 # print("-------------------") # --> For debugging, feel free to uncomment
 
             if adjacency_matrix[current[0] - 1][child[0] - 1] > 1: # If the current node affects a child in another turbine...
-                if current[0] == 3:
+
+                if current[0] != 0:
+                    turbine_index_val = 1
+                else:
+                    print("Error")
+                    break
+
+                '''if current[0] == 3:
                     turbine_index_val = 1
                 elif current[0] == 7:
                     turbine_index_val = 2
@@ -131,7 +138,8 @@ def turbine_array_child(arr, nodeNames, start_arr, num_turbines, turbine_info, s
                     turbine_index_val = 5
                 else:
                     print("Error")
-                    break
+                    break'''
+
                 turbines_affected = turbine_info[current[2]][turbine_index_val]
                 # print("collision turbines", turbines_affected)
                 for i in turbines_affected:
@@ -1015,8 +1023,24 @@ def one_to_turbine_array_inference(arr, nodeNames, hypothesis_num, parent_or_chi
     return
 
 
-
 '''# Run for Inference Calculations
+
+arr, nodeNames = excel2Matrix("ExcelFiles/failureData.xlsx", "bigMatrix")
+start_components = [0]
+num_turbines = 10
+effects_mark = 27
+array_layout = [[0, [1], [1], [1], [1], [1]], 
+                [1, [2], [2], [2], [2], [2]],
+                [2, [3], [3], [3], [3], [3]], 
+                [3, [4], [4], [4], [4], [4]],
+                [4, [5], [5], [5], [5], [5]],
+                [5, [6], [6], [6], [6], [6]],
+                [6, [7], [7], [7], [7], [7]],
+                [7, [8], [8], [8], [8], [8]],
+                [8, [9], [9], [9], [9], [9]],
+                [9, [0], [0], [0], [0], [0]]]
+
+turbine_array_child(arr, nodeNames, [0], num_turbines, array_layout, 0, effects_mark, plot = True)
 
 arr, nodeNames = excel2Matrix("ExcelFiles/failureData.xlsx", "bigMatrix")
 start_components = [0]

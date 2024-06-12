@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="layer" for="node" attr.name="layer" attr.type="long" />
+  <graph edgedefault="directed">
+    <node id="Farm Failure">
+      <data key="layer">6</data>
+    </node>
+    <node id="0: FOWT Failure">
+      <data key="layer">5</data>
+    </node>
+    <node id="0: Floating Support Structure Capsize">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Watertight fault">
+      <data key="layer">2</data>
+    </node>
+    <node id="Design">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Floating Support Structure">
+      <data key="layer">3</data>
+    </node>
+    <node id="0: Floating Support Structure Cracks">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Structural failure">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Additional Structures Failures">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Potential Failure">
+      <data key="layer">2</data>
+    </node>
+    <node id="Operation">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Potential failure of landing platform">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Floating Support Structure Watertight fault">
+      <data key="layer">1</data>
+    </node>
+    <node id="Maintenance">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Floater unit sinkage">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Floating Support Structure SStructural plastic deformation">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Local stress accumulation">
+      <data key="layer">2</data>
+    </node>
+    <node id="Operation and Maintenance">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Asset damage">
+      <data key="layer">2</data>
+    </node>
+    <node id="Environmental condition">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Increased risk of collision, potential damage to the floater ">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Project cancellation">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Floating Support Structure Hit by dropped objects">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Floating Support Structure Structural break">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Tower collapse">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Reduced stability">
+      <data key="layer">2</data>
+    </node>
+    <node id="Manufacturing and Installation">
+      <data key="layer">0</data>
+    </node>
+    <node id="Manufacturing">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Structural reassessment">
+      <data key="layer">2</data>
+    </node>
+    <node id="Installation">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Anchor failure [1], [17]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Anchor failure">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Mooring lines">
+      <data key="layer">3</data>
+    </node>
+    <node id="0: Failure in buoyancy element">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: nan">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Failure in clump weight">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Fairlead failure [1], [17]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: The anchor cannot be dropped and lift">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Fairlead failure [1],[17]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Monitoring system fails">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Unable to monitor tension in the mooring lines">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Mooring line breakage[8]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Mooring line strength decrease or broken">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Mooring Line Corrosion [1]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Mooring Line Fatigue [1]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Mooring line wear [1]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Mooring lines broken [1,3]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Asset not in correct location or position">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Mooring winch failure [1]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: accelerated mechanical fatigue">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Cable weakening">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Dynamic cable">
+      <data key="layer">3</data>
+    </node>
+    <node id="0: anchoring damages">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Cables stress">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Cable Damage">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Operational disruption">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Corrosion of J-tube [6]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: J-tube degradation affecting cable integrity">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Crushing or deformation">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: damage and corrosion &#10;of mechanical parts">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Total loss of the line ">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Debris disturbance">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Power disruption">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Detachment">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Water penetration">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Failure of end termination [6]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: breakdown of insulation">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Failure of fixing clamps">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Exposure to elements">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Failure of insulations">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Failure of sheath">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Failure of watertightness">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: failures of conductors">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Loss of production">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Fatigue Cracks">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Geo-Hazards">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Loss of dynamic positioning ">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Loss of float bility (water adsorption)">
+      <data key="layer">1</data>
+    </node>
+    <node id="&lt;None&gt;">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: material degradation">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Mechanical degradation [20]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Movement of CPS due to scour/seabed mobility [6]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Cable being vulnerable to scour and need for repair or replacement">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Premature damage of outer protection layer">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Reduced sediment cover  lower than designed value for protection [6]">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Replacement of cable">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Small bending radius">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Insulation degradation">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Abnormal vibration">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Excessive Fatigue Life Consumption">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Tower">
+      <data key="layer">3</data>
+    </node>
+    <node id="0: Potential collapse">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Tower Cracks">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Failure of whole facility and vast economic loses">
+      <data key="layer">2</data>
+    </node>
+    <node id="Fabrication">
+      <data key="layer">0</data>
+    </node>
+    <node id="0: Failure of the WTG/Major repair campaign/Structure reassessment">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Plastic deformation">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Transition piece break">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Tower Unit collapse, Floater Unit damage">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Transition piece">
+      <data key="layer">3</data>
+    </node>
+    <node id="0: tension failure (rupture), buckling of the transition piece/ Tower unit damage">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Structural plastic deformation">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Transition Piece Cracks">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: Tower transition piece connections failure / resonance">
+      <data key="layer">2</data>
+    </node>
+    <node id="0: Transition piece vibration">
+      <data key="layer">1</data>
+    </node>
+    <node id="0: potential tower connections failure">
+      <data key="layer">2</data>
+    </node>
+    <edge source="0: FOWT Failure" target="Farm Failure" />
+    <edge source="0: Floating Support Structure Capsize" target="0: Watertight fault" />
+    <edge source="0: Floating Support Structure Capsize" target="0: Project cancellation" />
+    <edge source="0: Floating Support Structure Capsize" target="0: Asset damage" />
+    <edge source="0: Watertight fault" target="0: Floating Support Structure" />
+    <edge source="Design" target="0: Floating Support Structure Capsize" />
+    <edge source="Design" target="0: Floating Support Structure Cracks" />
+    <edge source="Design" target="0: Floater unit sinkage" />
+    <edge source="Design" target="0: Floating Support Structure Structural break" />
+    <edge source="Design" target="0: Mooring line wear [1]" />
+    <edge source="Design" target="0: Mooring winch failure [1]" />
+    <edge source="Design" target="0: accelerated mechanical fatigue" />
+    <edge source="Design" target="0: Corrosion of J-tube [6]" />
+    <edge source="Design" target="0: Crushing or deformation" />
+    <edge source="Design" target="0: damage and corrosion &#10;of mechanical parts" />
+    <edge source="Design" target="0: Failure of insulations" />
+    <edge source="Design" target="0: Geo-Hazards" />
+    <edge source="Design" target="0: material degradation" />
+    <edge source="Design" target="0: Movement of CPS due to scour/seabed mobility [6]" />
+    <edge source="Design" target="0: Reduced sediment cover  lower than designed value for protection [6]" />
+    <edge source="Design" target="0: Abnormal vibration" />
+    <edge source="Design" target="0: Tower Cracks" />
+    <edge source="Design" target="0: Plastic deformation" />
+    <edge source="Design" target="0: Transition piece break" />
+    <edge source="0: Floating Support Structure" target="0: FOWT Failure" />
+    <edge source="0: Floating Support Structure Cracks" target="0: Structural failure" />
+    <edge source="0: Floating Support Structure Cracks" target="0: Watertight fault" />
+    <edge source="0: Structural failure" target="0: Floating Support Structure" />
+    <edge source="0: Additional Structures Failures" target="0: Potential Failure" />
+    <edge source="0: Additional Structures Failures" target="0: Potential failure of landing platform" />
+    <edge source="0: Additional Structures Failures" target="0: Increased risk of collision, potential damage to the floater " />
+    <edge source="0: Potential Failure" target="0: Floating Support Structure" />
+    <edge source="Operation" target="0: Additional Structures Failures" />
+    <edge source="Operation" target="0: Floating Support Structure Hit by dropped objects" />
+    <edge source="Operation" target="0: Floating Support Structure Structural break" />
+    <edge source="Operation" target="0: Floater unit sinkage" />
+    <edge source="Operation" target="0: Floating Support Structure Cracks" />
+    <edge source="Operation" target="0: Anchor failure [1], [17]" />
+    <edge source="Operation" target="0: Failure in buoyancy element" />
+    <edge source="Operation" target="0: Failure in clump weight" />
+    <edge source="Operation" target="0: Fairlead failure [1], [17]" />
+    <edge source="Operation" target="0: Fairlead failure [1],[17]" />
+    <edge source="Operation" target="0: Monitoring system fails" />
+    <edge source="Operation" target="0: Mooring Line Fatigue [1]" />
+    <edge source="Operation" target="0: Mooring line wear [1]" />
+    <edge source="Operation" target="0: Mooring lines broken [1,3]" />
+    <edge source="Operation" target="0: Cable Damage" />
+    <edge source="Operation" target="0: Detachment" />
+    <edge source="Operation" target="0: Failure of fixing clamps" />
+    <edge source="Operation" target="0: Failure of sheath" />
+    <edge source="Operation" target="0: Failure of watertightness" />
+    <edge source="Operation" target="0: failures of conductors" />
+    <edge source="Operation" target="0: Fatigue Cracks" />
+    <edge source="Operation" target="0: Small bending radius" />
+    <edge source="Operation" target="0: Tower Cracks" />
+    <edge source="Operation" target="0: Tower collapse" />
+    <edge source="Operation" target="0: Structural plastic deformation" />
+    <edge source="Operation" target="0: Transition Piece Cracks" />
+    <edge source="Operation" target="0: Transition piece vibration" />
+    <edge source="0: Potential failure of landing platform" target="0: Floating Support Structure" />
+    <edge source="0: Floating Support Structure Watertight fault" target="0: Potential Failure" />
+    <edge source="0: Floating Support Structure Watertight fault" target="0: Asset damage" />
+    <edge source="0: Floating Support Structure Watertight fault" target="0: Watertight fault" />
+    <edge source="0: Floating Support Structure Watertight fault" target="0: Reduced stability" />
+    <edge source="Maintenance" target="0: Floating Support Structure Watertight fault" />
+    <edge source="Maintenance" target="0: Floating Support Structure Structural break" />
+    <edge source="Maintenance" target="0: Mooring Line Corrosion [1]" />
+    <edge source="Maintenance" target="0: Mooring Line Fatigue [1]" />
+    <edge source="Maintenance" target="0: Mooring lines broken [1,3]" />
+    <edge source="Maintenance" target="0: Mooring winch failure [1]" />
+    <edge source="Maintenance" target="0: Abnormal vibration" />
+    <edge source="Maintenance" target="0: Tower Cracks" />
+    <edge source="Maintenance" target="0: Transition piece vibration" />
+    <edge source="Maintenance" target="0: Structural plastic deformation" />
+    <edge source="Maintenance" target="0: Transition Piece Cracks" />
+    <edge source="0: Floater unit sinkage" target="0: Potential Failure" />
+    <edge source="0: Floating Support Structure SStructural plastic deformation" target="0: Local stress accumulation" />
+    <edge source="0: Local stress accumulation" target="0: Floating Support Structure" />
+    <edge source="0: Local stress accumulation" target="0: Transition piece" />
+    <edge source="Operation and Maintenance" target="0: Floating Support Structure SStructural plastic deformation" />
+    <edge source="Operation and Maintenance" target="0: Floating Support Structure Structural break" />
+    <edge source="Operation and Maintenance" target="0: Transition piece break" />
+    <edge source="0: Asset damage" target="0: Floating Support Structure" />
+    <edge source="Environmental condition" target="0: Floating Support Structure Watertight fault" />
+    <edge source="Environmental condition" target="0: Floating Support Structure Hit by dropped objects" />
+    <edge source="Environmental condition" target="0: Floating Support Structure Structural break" />
+    <edge source="Environmental condition" target="0: Floating Support Structure Capsize" />
+    <edge source="Environmental condition" target="0: Mooring line breakage[8]" />
+    <edge source="Environmental condition" target="0: anchoring damages" />
+    <edge source="Environmental condition" target="0: Debris disturbance" />
+    <edge source="Environmental condition" target="0: Loss of dynamic positioning " />
+    <edge source="Environmental condition" target="0: Premature damage of outer protection layer" />
+    <edge source="Environmental condition" target="0: Reduced sediment cover  lower than designed value for protection [6]" />
+    <edge source="Environmental condition" target="0: Abnormal vibration" />
+    <edge source="Environmental condition" target="0: Tower Cracks" />
+    <edge source="Environmental condition" target="0: Transition piece break" />
+    <edge source="Environmental condition" target="0: Transition Piece Cracks" />
+    <edge source="0: Increased risk of collision, potential damage to the floater " target="0: Floating Support Structure" />
+    <edge source="0: Project cancellation" target="0: Floating Support Structure" />
+    <edge source="0: Floating Support Structure Hit by dropped objects" target="0: Asset damage" />
+    <edge source="0: Floating Support Structure Structural break" target="0: Asset damage" />
+    <edge source="0: Floating Support Structure Structural break" target="0: Watertight fault" />
+    <edge source="0: Floating Support Structure Structural break" target="0: Tower collapse" />
+    <edge source="0: Floating Support Structure Structural break" target="0: Structural reassessment" />
+    <edge source="0: Tower collapse" target="0: Floating Support Structure" />
+    <edge source="0: Tower collapse" target="0: Failure of whole facility and vast economic loses" />
+    <edge source="0: Reduced stability" target="0: Floating Support Structure" />
+    <edge source="Manufacturing and Installation" target="0: Floating Support Structure Watertight fault" />
+    <edge source="Manufacturing" target="0: Floating Support Structure Cracks" />
+    <edge source="Manufacturing" target="0: Mooring line breakage[8]" />
+    <edge source="Manufacturing" target="0: Mooring line wear [1]" />
+    <edge source="Manufacturing" target="0: Failure of end termination [6]" />
+    <edge source="Manufacturing" target="0: Failure of watertightness" />
+    <edge source="Manufacturing" target="0: Tower Cracks" />
+    <edge source="Manufacturing" target="0: Plastic deformation" />
+    <edge source="0: Structural reassessment" target="0: Floating Support Structure" />
+    <edge source="Installation" target="0: Floating Support Structure Cracks" />
+    <edge source="Installation" target="0: Corrosion of J-tube [6]" />
+    <edge source="Installation" target="0: Movement of CPS due to scour/seabed mobility [6]" />
+    <edge source="Installation" target="0: Abnormal vibration" />
+    <edge source="Installation" target="0: Tower Cracks" />
+    <edge source="Installation" target="0: Structural plastic deformation" />
+    <edge source="Installation" target="0: Transition Piece Cracks" />
+    <edge source="0: Anchor failure [1], [17]" target="0: Anchor failure" />
+    <edge source="0: Anchor failure" target="0: Mooring lines" />
+    <edge source="0: Mooring lines" target="0: FOWT Failure" />
+    <edge source="0: Failure in buoyancy element" target="0: nan" />
+    <edge source="0: nan" target="0: Mooring lines" />
+    <edge source="0: nan" target="0: Dynamic cable" />
+    <edge source="0: Failure in clump weight" target="0: nan" />
+    <edge source="0: Fairlead failure [1], [17]" target="0: The anchor cannot be dropped and lift" />
+    <edge source="0: The anchor cannot be dropped and lift" target="0: Mooring lines" />
+    <edge source="0: Fairlead failure [1],[17]" target="0: The anchor cannot be dropped and lift" />
+    <edge source="0: Monitoring system fails" target="0: Unable to monitor tension in the mooring lines" />
+    <edge source="0: Unable to monitor tension in the mooring lines" target="0: Mooring lines" />
+    <edge source="0: Mooring line breakage[8]" target="0: Mooring line strength decrease or broken" />
+    <edge source="0: Mooring line strength decrease or broken" target="0: Mooring lines" />
+    <edge source="0: Mooring Line Corrosion [1]" target="0: Mooring line strength decrease or broken" />
+    <edge source="0: Mooring Line Fatigue [1]" target="0: Mooring line strength decrease or broken" />
+    <edge source="0: Mooring line wear [1]" target="0: Mooring line strength decrease or broken" />
+    <edge source="0: Mooring lines broken [1,3]" target="0: Asset not in correct location or position" />
+    <edge source="0: Asset not in correct location or position" target="0: Mooring lines" />
+    <edge source="0: Mooring winch failure [1]" target="0: Asset not in correct location or position" />
+    <edge source="0: accelerated mechanical fatigue" target="0: Cable weakening" />
+    <edge source="0: Cable weakening" target="0: Dynamic cable" />
+    <edge source="0: Dynamic cable" target="0: FOWT Failure" />
+    <edge source="0: anchoring damages" target="0: Cables stress" />
+    <edge source="0: Cables stress" target="0: Dynamic cable" />
+    <edge source="0: Cable Damage" target="0: Operational disruption" />
+    <edge source="0: Operational disruption" target="0: Dynamic cable" />
+    <edge source="0: Corrosion of J-tube [6]" target="0: J-tube degradation affecting cable integrity" />
+    <edge source="0: J-tube degradation affecting cable integrity" target="0: Dynamic cable" />
+    <edge source="0: Crushing or deformation" target="0: Cable weakening" />
+    <edge source="0: damage and corrosion &#10;of mechanical parts" target="0: Total loss of the line " />
+    <edge source="0: Total loss of the line " target="0: Dynamic cable" />
+    <edge source="0: Debris disturbance" target="0: Power disruption" />
+    <edge source="0: Power disruption" target="0: Dynamic cable" />
+    <edge source="0: Detachment" target="0: Water penetration" />
+    <edge source="0: Water penetration" target="0: Dynamic cable" />
+    <edge source="0: Failure of end termination [6]" target="0: breakdown of insulation" />
+    <edge source="0: breakdown of insulation" target="0: Dynamic cable" />
+    <edge source="0: Failure of fixing clamps" target="0: Exposure to elements" />
+    <edge source="0: Exposure to elements" target="0: Dynamic cable" />
+    <edge source="0: Failure of insulations" target="0: Power disruption" />
+    <edge source="0: Failure of sheath" target="0: Exposure to elements" />
+    <edge source="0: Failure of watertightness" target="0: Power disruption" />
+    <edge source="0: failures of conductors" target="0: Loss of production" />
+    <edge source="0: Loss of production" target="0: Dynamic cable" />
+    <edge source="0: Fatigue Cracks" target="0: Cable weakening" />
+    <edge source="0: Geo-Hazards" target="0: Power disruption" />
+    <edge source="0: Loss of dynamic positioning " target="0: Cables stress" />
+    <edge source="0: Loss of float bility (water adsorption)" target="0: nan" />
+    <edge source="&lt;None&gt;" target="0: Loss of float bility (water adsorption)" />
+    <edge source="&lt;None&gt;" target="0: Mechanical degradation [20]" />
+    <edge source="0: material degradation" target="0: Loss of production" />
+    <edge source="0: Mechanical degradation [20]" target="0: nan" />
+    <edge source="0: Movement of CPS due to scour/seabed mobility [6]" target="0: Cable being vulnerable to scour and need for repair or replacement" />
+    <edge source="0: Cable being vulnerable to scour and need for repair or replacement" target="0: Dynamic cable" />
+    <edge source="0: Premature damage of outer protection layer" target="0: Exposure to elements" />
+    <edge source="0: Reduced sediment cover  lower than designed value for protection [6]" target="0: Replacement of cable" />
+    <edge source="0: Replacement of cable" target="0: Dynamic cable" />
+    <edge source="0: Small bending radius" target="0: Insulation degradation" />
+    <edge source="0: Insulation degradation" target="0: Dynamic cable" />
+    <edge source="0: Abnormal vibration" target="0: Excessive Fatigue Life Consumption" />
+    <edge source="0: Abnormal vibration" target="0: Potential collapse" />
+    <edge source="0: Excessive Fatigue Life Consumption" target="0: Tower" />
+    <edge source="0: Tower" target="0: FOWT Failure" />
+    <edge source="0: Potential collapse" target="0: Tower" />
+    <edge source="0: Tower Cracks" target="0: Failure of whole facility and vast economic loses" />
+    <edge source="0: Tower Cracks" target="0: Potential collapse" />
+    <edge source="0: Tower Cracks" target="0: Failure of the WTG/Major repair campaign/Structure reassessment" />
+    <edge source="0: Failure of whole facility and vast economic loses" target="0: Tower" />
+    <edge source="Fabrication" target="0: Tower Cracks" />
+    <edge source="Fabrication" target="0: Transition Piece Cracks" />
+    <edge source="0: Failure of the WTG/Major repair campaign/Structure reassessment" target="0: Tower" />
+    <edge source="0: Plastic deformation" target="0: Potential collapse" />
+    <edge source="0: Transition piece break" target="0: Tower Unit collapse, Floater Unit damage" />
+    <edge source="0: Transition piece break" target="0: tension failure (rupture), buckling of the transition piece/ Tower unit damage" />
+    <edge source="0: Tower Unit collapse, Floater Unit damage" target="0: Transition piece" />
+    <edge source="0: Transition piece" target="0: FOWT Failure" />
+    <edge source="0: tension failure (rupture), buckling of the transition piece/ Tower unit damage" target="0: Transition piece" />
+    <edge source="0: Structural plastic deformation" target="0: Local stress accumulation" />
+    <edge source="0: Transition Piece Cracks" target="0: Tower transition piece connections failure / resonance" />
+    <edge source="0: Transition Piece Cracks" target="0: potential tower connections failure" />
+    <edge source="0: Tower transition piece connections failure / resonance" target="0: Transition piece" />
+    <edge source="0: Transition piece vibration" target="0: potential tower connections failure" />
+    <edge source="0: potential tower connections failure" target="0: Transition piece" />
+  </graph>
+</graphml>
